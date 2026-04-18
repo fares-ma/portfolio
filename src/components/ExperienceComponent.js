@@ -75,8 +75,8 @@ const Item = {
   },
 };
 
-const BlogComponent = (props) => {
-  const { name, tags, date, imgSrc, link } = props.blog;
+const ExperienceComponent = (props) => {
+  const { name, tags, date, imgSrc, link } = props.exp;
   return (
     <Container variants={Item}>
       <Box target="_blank" href={`${link}`}>
@@ -93,4 +93,4 @@ const BlogComponent = (props) => {
   );
 };
 
-export default BlogComponent;
+export default ExperienceComponent;

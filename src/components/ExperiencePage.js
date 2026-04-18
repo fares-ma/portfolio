@@ -5,8 +5,8 @@ import LogoComponent from '../subComponents/LogoComponent'
 import SocialIcons  from '../subComponents/SocialIcons'
 import PowerButton  from '../subComponents/PowerButton'
 
-import {Blogs} from '../data/BlogData';
-import BlogComponent from './BlogComponent'
+import {Experiences} from '../data/ExperienceData';
+import ExperienceComponent from './ExperienceComponent'
 import AnchorComponent from '../subComponents/Anchor'
 import BigTitle from "../subComponents/BigTitlte"
 import { motion } from 'framer-motion'
@@ -56,7 +56,7 @@ const container = {
   
   }
 
-const BlogPage = () => {
+const ExperiencePage = () => {
 
     const [numbers, setNumbers] = useState(0);
 
@@ -84,17 +84,17 @@ const BlogPage = () => {
 <Grid>
 
 {
-    Blogs.map(blog => {
-        return <BlogComponent key={blog.id} blog={blog} />
+    Experiences.map(exp => {
+        return <ExperienceComponent key={exp.id} exp={exp} />
     })
 }
 </Grid>
 
 </Center>
-<BigTitle text="BLOG" top="5rem" left="5rem" />
+<BigTitle text="EXPERIENCE" top="5rem" left="5rem" />
             </Container>
         </MainContainer>
     )
 }
 
-export default BlogPage
+export default ExperiencePage

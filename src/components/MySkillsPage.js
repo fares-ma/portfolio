@@ -77,7 +77,28 @@ strong{
     margin-bottom: 1rem;
     text-transform: uppercase;
 }
-ul,p{
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+    margin-left: 0;
+    margin-top: 0.5rem;
+}
+li{
+    background-color: ${props => props.theme.text};
+    color: ${props => props.theme.body};
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+${Main}:hover li {
+    background-color: ${props => props.theme.body};
+    color: ${props => props.theme.text};
+}
+p{
     margin-left: 2rem;
 }
 `
@@ -93,51 +114,61 @@ const MySkillsPage = () => {
 <ParticleComponent theme='light' />
             <Main>
 <Title>
-    <Design width={40} height={40} /> Designer
+    <Design width={40} height={40} /> Backend Developer
 </Title>
 <Description>
-I love to create design which speaks, Keep it clean, minimal and simple.
+Building scalable APIs with Clean Architecture, CQRS, and N-Tier patterns.
 </Description>
 <Description>
-<strong>I like to Design</strong>
+<strong>Core Skills</strong>
 <ul>
-    <li>
-        Web Design
-    </li>
-    <li>
-        Mobile Apps
-    </li>
+    <li>C#</li>
+    <li>ASP.NET Core Web API / MVC</li>
+    <li>Entity Framework Core</li>
+    <li>LINQ</li>
+    <li>SOLID</li>
+    <li>Repository</li>
+    <li>Unit of Work</li>
 </ul>
 </Description>
 <Description>
-<strong>Tools</strong>
+<strong>Auth & Security</strong>
 <ul>
-    <li>
-       Figma
-    </li>
-    
+    <li>ASP.NET Identity</li>
+    <li>JWT</li>
+    <li>RBAC</li>
+    <li>OAuth2</li>
 </ul>
 </Description>
 
             </Main>
             <Main>
 <Title>
-    <Develope width={40} height={40} /> Frontend Developer
+    <Develope width={40} height={40} /> Databases & DevOps
 </Title>
 <Description>
-I value business or brand for which i'm creating, thus i enjoy bringing new ideas to life.
+Ensuring data reliability, caching, and efficient deployment for environments.
 </Description>
 <Description>
-<strong>Skills</strong>
-<p>
-Html, Css, Js, React, Redux, Sass, Bootstrap, Tailwind, Firebase etc.
-</p>
+<strong>Databases & Cloud</strong>
+<ul>
+    <li>SQL Server</li>
+    <li>Redis</li>
+    <li>Elasticsearch</li>
+    <li>AWS S3</li>
+</ul>
 </Description>
 <Description>
-<strong>Tools</strong>
-<p>
-VScode, Github, Codepen etc.
-</p>
+<strong>Testing & DevOps</strong>
+<ul>
+    <li>Docker</li>
+    <li>Git</li>
+    <li>xUnit</li>
+    <li>Moq</li>
+    <li>FluentAssertions</li>
+    <li>Postman</li>
+    <li>Swagger UI</li>
+</ul>
 </Description>
 
             </Main>

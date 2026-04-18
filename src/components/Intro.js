@@ -59,15 +59,32 @@ display: flex;
 flex-direction: column;
 justify-content: space-evenly;
 
-&>*:last-child{
+&>h6{
     color: ${props => `rgba(${props.theme.bodyRgba},0.6)` };
     font-size: calc(0.5rem + 1.5vw);
     font-weight:300;
-
 }
+`
 
-
-
+const CVButton = styled.a`
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: calc(0.4rem + 0.8vw);
+  font-family: 'Karla', sans-serif;
+  color: ${props => props.theme.text};
+  background-color: ${props => props.theme.body};
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  align-self: flex-start;
+  
+  &:hover {
+    transform: scale(1.1);
+    color: ${props => props.theme.body};
+    background-color: transparent;
+    border: 1px solid ${props => props.theme.body};
+  }
 `
 
 const Intro = () => {
@@ -80,8 +97,11 @@ const Intro = () => {
             <SubBox>
                 <Text>
                     <h1>Hi,</h1>
-                    <h3>I'm CodeBucks.</h3>
-                    <h6>I design and Code simple yet beautiful websites.</h6>
+                    <h3>I'm Fares.</h3>
+                    <h6>Backend Developer specializing in .NET Core, clean architecture, and scalable APIs.</h6>
+                    <CVButton href="/Fares_Mohamed_CV.pdf" download="Fares_Mohamed_CV.pdf" target="_blank">
+                        Download CV
+                    </CVButton>
                 </Text>
             </SubBox>
             <SubBox>

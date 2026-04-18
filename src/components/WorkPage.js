@@ -14,11 +14,17 @@ import BigTitlte from "../subComponents/BigTitlte";
 
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
-
   height: 400vh;
   position: relative;
   display: flex;
   align-items: center;
+
+  @media (max-width: 50em) {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    padding: 8rem 0;
+  }
 `;
 
 const Main = styled(motion.ul)`
@@ -27,8 +33,17 @@ const Main = styled(motion.ul)`
   left: calc(10rem + 15vw);
   height: 40vh;
   display: flex;
-
   color: white;
+
+  @media (max-width: 50em) {
+    position: relative;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    height: auto;
+    padding: 0 1rem;
+    gap: 3rem;
+  }
 `;
 const Rotate = styled.span`
   display: block;
@@ -61,13 +76,22 @@ const WorkPage = () => {
     let element = ref.current;
 
     const rotate = () => {
-      element.style.transform = `translateX(${-window.pageYOffset}px)`;
+      // Apply horizontal scroll only on larger screens
+      if (window.innerWidth > 800) {
+        element.style.transform = `translateX(${-window.pageYOffset}px)`;
+      } else {
+        element.style.transform = "none";
+      }
 
-      return (yinyang.current.style.transform =
-        "rotate(" + -window.pageYOffset + "deg)");
+      if (yinyang.current) {
+         return (yinyang.current.style.transform =
+          "rotate(" + -window.pageYOffset + "deg)");
+      }
     };
 
     window.addEventListener("scroll", rotate);
+    // Initial call to set positions
+    rotate();
     return () => {
       window.removeEventListener("scroll", rotate);
     };

@@ -43,20 +43,41 @@ const Main =  styled.div`
   z-index: 3;
   line-height: 1.5;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  font-size: calc(0.6rem + 1vw);
+  align-items: flex-start;
+  font-size: calc(0.5rem + 0.9vw);
  backdrop-filter: blur(4px);
   
   position: absolute;
   left: calc(5rem + 5vw);
-  top: 10rem;
+  top: 11.5rem;
   font-family: 'Ubuntu Mono', monospace;
   font-style: italic;
 `
 
 
 
+
+const CVButton = styled.a`
+  margin-top: 2rem;
+  padding: 0.5rem 1rem;
+  font-size: calc(0.6rem + 0.5vw);
+  font-family: 'Karla', sans-serif;
+  color: ${props => props.theme.body};
+  background-color: ${props => props.theme.text};
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  
+  &:hover {
+    transform: scale(1.1);
+    color: ${props => props.theme.text};
+    background-color: transparent;
+    border: 1px solid ${props => props.theme.text};
+  }
+`
 
 const AboutPage = () => {
     return (
@@ -72,11 +93,16 @@ const AboutPage = () => {
             <img src={astronaut} alt="spaceman" />
         </Spaceman>    
         <Main>
-        I'm a front-end developer located in India. I love to create simple yet beautiful websites with great user experience.
-<br /> <br/>
-I'm interested in the whole frontend stack Like trying new things and building great projects. I'm an independent freelancer and blogger. I love to write blogs and read books.
-<br/> <br/>
-I believe everything is an Art when you put your consciousness in it. You can connect with me via social links.
+        <div>
+        I'm a passionate <strong>Backend .NET Developer</strong> based in Cairo, Egypt. I specialize in building highly scalable, production-ready RESTful APIs and robust server-side architectures.
+        <br /> <br/>
+        My technical stack revolves around <strong>.NET Core, Clean Architecture, CQRS, and EF Core</strong>. I thrive on optimizing database performance, implementing caching layers with Redis, and writing reliable, test-driven code using xUnit.
+        <br/> <br/>
+        I believe that software engineering is a true craft driven by <strong>SOLID principles</strong>. I constantly strive to transform complex business requirements into organized, maintainable systems.
+        </div>
+        <CVButton href="/Fares_Mohamed_CV.pdf" download="Fares_Mohamed_CV.pdf" target="_blank">
+            Download CV
+        </CVButton>
         </Main>
 
         <BigTitle text="ABOUT" top="10%" left="5%" />

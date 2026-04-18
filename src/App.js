@@ -7,7 +7,7 @@ import GlobalStyle from "./globalStyles";
 //Components
 import Main from "./components/Main";
 import AboutPage from "./components/AboutPage";
-import BlogPage from "./components/BlogPage";
+import ExperiencePage from "./components/ExperiencePage";
 import WorkPage from "./components/WorkPage";
 import MySkillsPage from "./components/MySkillsPage";
 import SoundBar from "./subComponents/SoundBar";
@@ -19,7 +19,7 @@ function App() {
       <GlobalStyle />
 
       <ThemeProvider theme={lightTheme}>
-        <SoundBar />
+        {/* <SoundBar /> Disabled correctly as audio missing/unprofessional for most backend devs */}
 
         {/* For framer-motion animation on page change! */}
         {/* Changed prop from exitBefore to mode */}
@@ -33,7 +33,7 @@ function App() {
 
             <Route path="/about" element={<AboutPage />} />
 
-            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/experience" element={<ExperiencePage />} />
 
             <Route path="/work" element={<WorkPage />} />
 

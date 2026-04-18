@@ -7,78 +7,99 @@ import { Github } from '../components/AllSvgs';
 
 
 const Box = styled(motion.li)`
-width: 16rem;
+width: 18rem;
 height: 40vh;
 background-color: ${props => props.theme.text};
 color:${props => props.theme.body};
-padding: 1.5rem 2rem;
-margin-right: 8rem;
-border-radius: 0 50px 0 50px;
+padding: 2rem;
+margin-right: 6rem;
+border-radius: 20px;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
-border: 1px solid ${props => props.theme.body};
-transition: all 0.2s ease;
+border: 2px solid ${props => props.theme.body};
+box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+transition: all 0.3s ease;
 
 &:hover{
 background-color: ${props => props.theme.body};
 color:${props => props.theme.text};
-border: 1px solid ${props => props.theme.text};
-
+border: 2px solid ${props => props.theme.text};
+box-shadow: 0 10px 25px rgba(252, 246, 244, 0.4);
+transform: translateY(-10px);
 }
 `
 const Title = styled.h2`
-font-size: calc(1em + 0.5vw);
+font-size: calc(1.2em + 0.5vw);
+font-weight: 600;
 `
 
-const Description = styled.h2`
-font-size: calc(0.8em + 0.3vw);
+const Description = styled.p`
+font-size: calc(0.9em + 0.2vw);
 font-family: 'Karla',sans-serif;
-font-weight: 500;
+font-weight: 400;
+line-height: 1.5;
+margin-bottom: auto;
+margin-top: 1rem;
 `
 const Tags = styled.div`
 border-top: 2px solid ${props =>props.theme.body};
-padding-top: 0.5rem;
+padding-top: 1rem;
 display:flex;
 flex-wrap:wrap;
+gap: 0.5rem;
 ${Box}:hover &{
 border-top: 2px solid ${props =>props.theme.text};
 }
 `
 const Tag = styled.span`
-margin-right:1rem;
-font-size:calc(0.8em + 0.3vw);
+font-size:calc(0.7em + 0.2vw);
+padding: 0.2rem 0.6rem;
+background-color: ${props =>props.theme.body};
+color: ${props =>props.theme.text};
+border-radius: 12px;
+
+${Box}:hover &{
+background-color: ${props =>props.theme.text};
+color: ${props =>props.theme.body};
+}
 `
 
 const Footer = styled.footer`
 display: flex;
 justify-content: space-between;
+align-items: center;
+margin-top: 1.5rem;
 `
 
 const Link = styled.a`
 background-color: ${props =>props.theme.body};
 color: ${props =>props.theme.text};
 text-decoration: none;
-padding:0.5rem calc(2rem + 2vw);
-border-radius: 0 0 0 50px;
+padding: 0.6rem 2rem;
+border-radius: 5px;
 font-size:calc(1em + 0.5vw);
+font-weight: 600;
+transition: all 0.3s ease;
 
 ${Box}:hover &{
     background-color: ${props =>props.theme.text};
     color: ${props =>props.theme.body};
-
+    transform: scale(1.05);
 }
 `
 
 const Git = styled.a`
 color: inherit;
 text-decoration: none;
+transition: all 0.3s ease;
+
 ${Box}:hover &{
+    transform: scale(1.2);
     &>*{
         fill:${props =>props.theme.text};
     }
 }
-
 `
 
 // Framer motion configuration
