@@ -8,13 +8,13 @@ Welcome to the source code repository of my personal portfolio. This is a high-e
 
 ### 🎨 Visual Aesthetics & Custom Animations
 * **GSAP Typewriter Effect:** Upon loading, my name and job description in the Hero section are revealed via an advanced staggered typewriter character animation.
-* **Animated Handwritten SVG Signature:** The custom signature `Fares Mohamed` on the left is rendered as a clean SVG path that realistically draws itself stroke-by-stroke when the page loads, using `GSAP` stroke-dashoffset keyframes.
-* **Pulsating Energy Aura Mouse Cursor:** Custom custom cursor consisting of a sharp tracking core dot and a larger, soft-blurred radial gradient aura (Cyan/Blue) that dynamically pulses in a breathing keyframe loop and stretches behind cursor movement.
+* **Animated Handwritten SVG Signature (2026):** The custom signature on the left is rendered as a clean SVG path that realistically draws itself stroke-by-stroke when the page loads, using `GSAP` stroke-dashoffset keyframes, reflecting an authentic handwritten style with the year 2026.
+* **Pulsating Energy Aura Mouse Cursor:** A custom cursor consisting of a sharp tracking core dot and a larger, soft-blurred radial gradient aura (Blue) that dynamically pulses in a breathing keyframe loop and stretches behind cursor movement.
 * **Scroll-Linked Experiences:** Under the **Experience** section, each career entry slides and fades into view one-by-one dynamically as you scroll down, backed by GSAP `ScrollTrigger` bindings.
 
 ### 📱 Responsive & Floating Navigation
-* **Collapsing Scroll-Header:** When you scroll down, the text links and logo of the main Header slide up and fade out to maximize screen readability.
-* **Floating Hamburger Icon:** The round, glassmorphic Hamburger Menu button on the top-right remains permanently fixed and floating, allowing full menu access at any point in the scroll height.
+* **Persistent Fixed Header:** The main Header (including links, logo, and menu) remains permanently fixed at the top of the screen as you scroll, ensuring easy navigation access at all times.
+* **Floating Hamburger Icon:** The round, glassmorphic Hamburger Menu button on the top-right remains permanently accessible along with the header.
 * **Mobile Ready:** The layout is fully responsive, looking premium on both desktop viewports and simulated mobile devices.
 
 ### 💼 Professional Assets & Sections
