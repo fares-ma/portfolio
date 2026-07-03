@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fares Mohamed — Backend .NET Developer Portfolio
 
-## Getting Started
+Welcome to the source code repository of my personal portfolio. This is a high-end, premium developer portfolio website designed to showcase my experience, projects, skills, and certifications as a Backend .NET Developer. It is built using **Next.js**, **GSAP**, and **Framer Motion** to deliver a cutting-edge interactive user experience.
 
-First, run the development server:
+---
+
+## ✨ Features & Interactive Details
+
+### 🎨 Visual Aesthetics & Custom Animations
+* **GSAP Typewriter Effect:** Upon loading, my name and job description in the Hero section are revealed via an advanced staggered typewriter character animation.
+* **Animated Handwritten SVG Signature:** The custom signature `Fares Mohamed` on the left is rendered as a clean SVG path that realistically draws itself stroke-by-stroke when the page loads, using `GSAP` stroke-dashoffset keyframes.
+* **Pulsating Energy Aura Mouse Cursor:** Custom custom cursor consisting of a sharp tracking core dot and a larger, soft-blurred radial gradient aura (Cyan/Blue) that dynamically pulses in a breathing keyframe loop and stretches behind cursor movement.
+* **Scroll-Linked Experiences:** Under the **Experience** section, each career entry slides and fades into view one-by-one dynamically as you scroll down, backed by GSAP `ScrollTrigger` bindings.
+
+### 📱 Responsive & Floating Navigation
+* **Collapsing Scroll-Header:** When you scroll down, the text links and logo of the main Header slide up and fade out to maximize screen readability.
+* **Floating Hamburger Icon:** The round, glassmorphic Hamburger Menu button on the top-right remains permanently fixed and floating, allowing full menu access at any point in the scroll height.
+* **Mobile Ready:** The layout is fully responsive, looking premium on both desktop viewports and simulated mobile devices.
+
+### 💼 Professional Assets & Sections
+* **Services:** Detailed overview of backend development specialties, ASP.NET Web APIs, Databases, Clean Code, and System Architectures.
+* **Experience & Certifications:** Structured timeline displaying professional internships (Link Development, route, FODWA, DEPI), Competitive Programming achievements, and link-tracked certificates.
+* **Projects Grid:** Showcases production-ready repositories and features (Clean Architecture, SQL Server optimization, Generic Repository patterns) with live links.
+* **Resume Download:** Direct integration allowing visitors to download my verified CV (`cv.pdf`) directly from the Hero section.
+
+---
+
+## 🛠️ Tech Stack
+
+* **Framework:** Next.js 15+ (App Router)
+* **Styling:** Tailwind CSS (Vanilla configuration)
+* **Animation Suite:**
+  * GSAP (GreenSock Animation Platform) + ScrollTrigger
+  * Framer Motion (for Spring-based physics custom cursor)
+* **Icons:** Lucide React & custom SVG packages
+
+---
+
+## 🚀 Getting Started
+
+To run the development server locally:
 
 ```bash
+# Navigate to the portfolio folder
+cd fares-portfolio
+
+# Install dependencies
+npm install
+
+# Run the dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the live site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 🏗️ Production Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To build the optimized static production bundle:
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run build
+```
